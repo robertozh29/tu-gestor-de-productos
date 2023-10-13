@@ -1,5 +1,5 @@
 <?php
-require_once("../model/connection.php");
+require_once("model/connection.php");
 
 // Generamos una objeto de nuestra estructura Connection para crear una nueva conexion a nuestra base de datos
 $connection = new Connection();
@@ -23,7 +23,7 @@ if($conn){
     $stmt->bindParam(':tipo', $tipo, PDO::PARAM_STR);
     $stmt->execute();
 
-    header('Location: ../views/registro_exitoso.php');
+    header('Location: bienvenido.php');
 
 }else{
     echo "Fallo al conectar base de datos";

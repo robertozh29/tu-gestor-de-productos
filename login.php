@@ -25,7 +25,7 @@
                 }
             ?>
             <hr/>
-            <a href="./views/registrar.php">Registrar</a>
+            <a href="registrar.php">Registrar</a>
         </form>
     </div> 
 </body>

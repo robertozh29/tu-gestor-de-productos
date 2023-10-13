@@ -10,7 +10,7 @@ if (!$_SESSION['usuario']) {
 <html>
 <head>
     <title>Página de Bienvenida</title>
-    <link rel="stylesheet" type="text/css" href="../styles/inicio.css">
+    <link rel="stylesheet" type="text/css" href="styles/inicio.css">
 </head>
 <body>
     <header>
@@ -20,7 +20,7 @@ if (!$_SESSION['usuario']) {
     <main>
         
         <a href="mostrar_usuarios.php"><p>Mostrar usuarios</p></a>
-        <form action="../controller/close_sessions.php" method="post">
+        <form action="controller/close_sessions.php" method="post">
             <input type="submit" value="Cerrar Sesión">
         </form>
     </main>

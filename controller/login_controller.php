@@ -25,7 +25,7 @@ if($conn){
     if ($result) {
         session_start();
         $_SESSION['usuario'] = $usuario;
-        header('Location: ../views/inicio.php');
+        header('Location: ../inicio.php');
     } else {
         header('Location: ../index.php?error=contrasena');
     }
