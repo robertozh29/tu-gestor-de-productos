@@ -8,7 +8,7 @@
     <div class="login container">
         <h1>Registrarse</h1>
 
-        <form action="prueba.php" method="post">
+        <form action="controlador_registrar.php" method="post">
             <label for="usuario">Nombre de usuario:</label>
             <input type="text" name="usuario" id="usuario" required><br>
 

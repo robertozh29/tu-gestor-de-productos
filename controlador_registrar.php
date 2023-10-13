@@ -1,31 +1,49 @@
-<?php
+<?php 
 require_once("model/connection.php");
 
 // Generamos una objeto de nuestra estructura Connection para crear una nueva conexion a nuestra base de datos
 $connection = new Connection();
 $conn = $connection->getConnection();
 
-
-//Validamos que la conexion haya sido exitosa
 if($conn){
-
     $nombre = $_POST['usuario'];
     $correo = $_POST['correo'];
-    $contrasena = $_POST['pass'];
+    $pass = $_POST['pass'];
     $tipo = 'usuario';
 
     // Insertamos los datos de registro a la base de datos
-    $sql = "INSERT INTO `usuario`(`usuario`, `correo`, `pass`, `tipo`) VALUES (:usuario, :correo, :pass, :tipo)";
+    $sql = "INSERT INTO `usuario`(`usuario`, `correo`, `pass`, `tipo`) VALUES (?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':usuario', $nombre, PDO::PARAM_STR);
-    $stmt->bindParam(':correo', $correo, PDO::PARAM_STR);
-    $stmt->bindParam(':pass', $contrasena, PDO::PARAM_STR);
-    $stmt->bindParam(':tipo', $tipo, PDO::PARAM_STR);
+
+    if($stmt){
+        $stmt->bind_param("ssss", $nombre, $correo, $pass, $tipo);
+
+        // Ejecutar query
+        if ($stmt->execute()) {
+                session_start();
+                $_SESSION['bienvenido'] = true;
+                header('Location: bienvenido.php');;
+        } else {
+            echo "Error al ejecutar la consulta de inserción: " . $stmt->error;
+        }
+
+
+        $stmt->close();
+    }
+    else{
+        echo("conexion faliida");
+    }
+
+    mysqli_stmt_bind_param($stmt, ':usuario', $nombre);
+    mysqli_stmt_bind_param($stmt, ':correo', $correo);
+    mysqli_stmt_bind_param($stmt, ':pass', $contrasena);
+    mysqli_stmt_bind_param($stmt, ':tipo', $tipo);
+
     $stmt->execute();
 
-    header('Location: bienvenido.php');
-
-}else{
-    echo "Fallo al conectar base de datos";
+    echo("conexion exitosa!" . $nombre);
+}
+else{
+    echo("Conexion fallida");
 }
 ?>

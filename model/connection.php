@@ -2,16 +2,16 @@
     
 class Connection {
     // Localhost
-    // private $host = "localhost";
-    // private $db_name = "test";
-    // private $username = "root";
-    // private $password = "";
+    private $host = "localhost";
+    private $db_name = "test";
+    private $username = "root";
+    private $password = "";
 
 
-    private $host= "tu-gestor-de-productos-db.mysql.database.azure.com";
-    private $db_name = "tugestordeproductosdb";
-    private $username = "roberto";
-    private $password="Lic291198";
+    //private $host= "tu-gestor-de-productos-db.mysql.database.azure.com";
+    //private $db_name = "tugestordeproductosdb";
+    //private $username = "roberto";
+    //private $password="Lic291198";
 
     public $conn;
 
