@@ -1,15 +1,15 @@
 <?php
     
 class Connection {
-    /* Localhost
-    private $host = "localhost";
-    private $database_name = "test";
-    private $username = "root";
-    private $password = "";
-    */
+    // Localhost
+    // private $host = "localhost";
+    // private $db_name = "test";
+    // private $username = "root";
+    // private $password = "";
+
 
     private $host= "tu-gestor-de-productos-db.mysql.database.azure.com";
-    private $database_name = "tugestordeproductosdb";
+    private $db_name = "tugestordeproductosdb";
     private $username = "roberto";
     private $password="Lic291198";
 
@@ -17,14 +17,14 @@ class Connection {
 
     public function getConnection(){
         $this->conn = null;
-        try{
-            $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->database_name,$this->username,$this->password);
-            $response = $this->conn;
-
-        }catch(PDOException $e){
-            $response = false;
-        }
         
+        $this->conn =  new mysqli($this->host, $this->username, $this->password, $this->db_name);
+        $response = $this->conn;
+
+        if ($this->conn->connect_error) {
+            die("Error de conexión: " . $conn->connect_error);
+        }
+
         return $response;
     }
     

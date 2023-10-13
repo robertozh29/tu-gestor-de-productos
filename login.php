@@ -10,7 +10,7 @@
 <body>
     <div class="login container">
         <h1>Tu gestor de productos</h1>
-        <form action="./controller/login_controller.php" method="post">
+        <form action="login_controller.php" method="post">
             <input type="text" placeholder="USUARIO" name="usuario" id="user">
             <input type="password" placeholder="CONTRASEÑA" name="pass" id="password">
             <input type="submit" value="Iniciar sesión">
