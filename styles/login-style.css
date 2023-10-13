@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+a:visited{
+    color: #1877f2;
+}
+input{
+    outline: none;
+}
+
+body .container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f2f5;
+}
+
+/* ----------LOGIN----------- */
+
+.login h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: #1877f2;
+    text-shadow: 2px 2px 3px #CCC;
+    margin-bottom: 6%;
+}
+
+.login form{
+    width: 95%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px 28px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+.login form input{
+    padding: 14px 16px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login form input[type="submit"]{
+    border-color: #1877f2;
+    background-color: #1877f2;
+    color: #fff;
+}
+
+.login form hr{
+    margin: 12px 0;
+}
+
+.login form a{
+    text-align: center;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* ----------HOME-----------*/
+
+.home ul{
+    height: 100px;
+    width: 100%;
+    color: red;
+}

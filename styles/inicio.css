@@ -1,0 +1,109 @@
+/* Estilos generales */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #1877f2;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+
+
+main a p{
+    background-color: #1877f2;
+    color: #fff;
+    padding: 12px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.welcome{
+    color:#1f1f1f;
+    font-size: 28px;
+    text-align: center;
+}
+
+footer {
+    background-color: #1877f2;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos de enlace */
+a {
+    color: #1877f2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form input {
+    background-color: #f21818;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 20px;
+}
+
+form input:hover {
+    background-color: #0f5ec1;
+}
+
+
+.mostrar-usurios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mostrar-usurios form{
+    margin-top: 25px;
+}
+
+.mostrar-usurios header{
+    width: 100%;
+}
+
+.mostrar-usurios header a{
+    color: #fff;
+}
+.mostrar-usurios header h1{
+    margin: 15px 0;
+}
+
+.mostrar-usurios h1{
+    margin: 50px 0 0 0;
+}
+
+.mostrar-usurios table{
+    margin: 20px 0;
+}
