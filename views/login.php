@@ -21,7 +21,7 @@
                 }
                 //Validamos que la conexion a la base de datos se correcto de lo contrario ensenamos este mensaje
                 else if (isset($_GET['error']) && $_GET['error'] === 'db') {
-                    echo "<p class='error'>Fallo al conectar base de datos</p>";
+                    echo "<p class='error'>Fallo al conectar base de datos </p>";
                 }
             ?>
             <hr/>
