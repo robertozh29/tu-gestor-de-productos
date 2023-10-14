@@ -15,18 +15,29 @@ if (!$_SESSION['usuario']) {
 <body>
     <header>
         <h1>Tu gestor de productos</h1>
-    </header>
-    <p class="welcome">Gracias por visitar tu gestor de productos<?php $_SESSION['usuario']; ?></p>
-    <main>
-        
-        <a href="mostrar_usuarios.php"><p>Mostrar usuarios</p></a>
         <form action="close_sessions.php" method="post">
             <input type="submit" value="Cerrar Sesión">
         </form>
+    </header>
+    <main>
+        
+        <div class="opciones">
+            <div class="contenedor-opcion" id="productos">
+                <img src="assets/almacen.jpg" alt="">
+                <p>Mis productos</p>
+            </div>
+            <div class="contenedor-opcion">
+                <img src="assets/usuarios.jpg" alt="">
+                <p>Mis usuarios</p>
+            </div>
+        </div>
+        
     </main>
     
     <footer>
         <p>&copy; <?php echo date("Y"); ?> - Tu gestor de productos</p>
     </footer>
+
+    <script src="functions.js"></script>
 </body>
 </html>
