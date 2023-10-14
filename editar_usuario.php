@@ -56,6 +56,6 @@ if (isset($_GET['editar'])) {
     }
 }
 ?>
-
+    <a href="mostrar_usuarios.php"><p>Regresar</p></a>
 </body>
 </html>
