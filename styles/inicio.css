@@ -172,6 +172,12 @@ form input:hover {
 
 .mostrar .admin{
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.mostrar .admin a{
+    padding: 0 5px;
 }
 
 

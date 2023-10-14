@@ -24,8 +24,7 @@
         // Comprobar si se ha enviado una solicitud de eliminación
         if (isset($_GET['eliminar'])) {
             $usuarioAEliminar = $_GET['eliminar'];
-            // Aquí debes agregar la lógica para eliminar al usuario de la base de datos.
-            // Puedes usar una consulta DELETE para esto.
+            // Lógica para eliminar al usuario de la base de datos.
             $sql = "DELETE FROM usuario WHERE usuario_id = $usuarioAEliminar";
             if ($conn->query($sql) === TRUE) {
                 echo "Usuario eliminado correctamente.";
@@ -33,6 +32,7 @@
                 echo "Error al eliminar al usuario: " . $conn->error;
             }
         }
+
         
         // Query para obtener todos los usuarios
         $sql = "SELECT * FROM usuario";
@@ -54,7 +54,7 @@
                     echo "<td>" . $row['usuario'] . "</td>";
                     echo "<td>" . $row['correo'] . "</td>";
                     echo "<td class='admin'>";
-                    echo "<a href='?eliminar=" . $row['usuario_id'] . "'>Eliminar</a>";
+                    echo "<a href=editar_usuario.php?editar=" . $row['usuario_id'] . ">Editar</a> | <a href='?eliminar=" . $row['usuario_id'] . "'>Eliminar</a>";
                     echo "</td>";
                 echo "</tr>";
             }
