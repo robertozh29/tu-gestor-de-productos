@@ -22,7 +22,7 @@ class Connection {
         $response = $this->conn;
 
         if ($this->conn->connect_error) {
-            die("Error de conexión: " . $conn->connect_error);
+            echo("Error de conexión: " . $conn->connect_error);
         }
 
         return $response;
