@@ -22,16 +22,16 @@ if (!$_SESSION['usuario']) {
     <main>
         
         <div class="opciones">
+            <div class="contenedor-opcion" id="usuarios">
+                <img src="assets/usuarios.jpg" alt="">
+                <p>Mis usuarios</p>
+            </div>
             <div class="contenedor-opcion" id="productos">
                 <img src="assets/almacen.jpg" alt="">
                 <p>Mis productos</p>
             </div>
-            <div class="contenedor-opcion">
-                <img src="assets/usuarios.jpg" alt="">
-                <p>Mis usuarios</p>
-            </div>
         </div>
-        
+
     </main>
     
     <footer>
