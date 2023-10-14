@@ -2,9 +2,10 @@
 require_once("model/connection.php");
 
 // Generamos una objeto de nuestra estructura Connection para crear una nueva conexion a nuestra base de datos
-$connection = new Connection();
-$conn = $connection->getConnection();
+//$connection = new Connection();
+//$conn = $connection->getConnection();
 
+$conn = false;
 if($conn){
     $nombre = $_POST['usuario'];
     $correo = $_POST['correo'];
