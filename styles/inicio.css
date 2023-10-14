@@ -104,6 +104,31 @@ form input:hover {
     margin: 50px 0 0 0;
 }
 
-.mostrar-usurios table{
-    margin: 20px 0;
+
+.mostrar {
+    border-collapse: collapse;
+    overflow-y: scroll;
+    max-height: 50vh;
+    width: 50%;
+    margin: 50px 0;
+}
+
+.mostrar tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.mostrar tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.mostrar th {
+    background-color: #1877f2;
+    color: #fff;
+    padding: 8px;
+    text-align: left;
+}
+
+.mostrar td {
+    padding: 8px;
+    border: 1px solid #ccc;
 }

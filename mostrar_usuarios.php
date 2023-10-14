@@ -27,7 +27,7 @@
         
         // Ejecutar la consulta
         if ($result) {
-            echo "<table border='1'>
+            echo "<table border='1' class='mostrar'>
                     <tr>
                         <th>ID</th>
                         <th>Usuario</th>
