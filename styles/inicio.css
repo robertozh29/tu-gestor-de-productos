@@ -169,3 +169,16 @@ form input:hover {
     padding: 8px;
     border: 1px solid #ccc;
 }
+
+@media (max-width: 768px) {
+    .opciones{
+        flex-direction: column;
+    }
+    .contenedor-opcion{
+        margin: 10px 0;
+    }
+    .contenedor-opcion img{
+        width: 75vw;
+        height: fit-content;
+    }
+  }
