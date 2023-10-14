@@ -31,20 +31,19 @@ if($conn){
                 header('Location: inicio.php');
             }
             else {
-                echo "No se obtuvieron resultados.";
+                header('Location: index.php?error=contrasena');
             }               
-        }
-        else {
-            echo "Error al ejecutar la consulta: " . $stmt->error;
         }
 
         $stmt->close();
     }else{
-        echo("conexion faliida");
+        header('Location: index.php?error=db');
     }
 
 
     $conn->close();
+}else{
+    header('Location: index.php?error=db');
 }
 
 
