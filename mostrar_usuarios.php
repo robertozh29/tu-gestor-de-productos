@@ -21,6 +21,19 @@
             die("Error de conexión: " . $conn->connect_error);
         }
 
+        // Comprobar si se ha enviado una solicitud de eliminación
+        if (isset($_GET['eliminar'])) {
+            $usuarioAEliminar = $_GET['eliminar'];
+            // Aquí debes agregar la lógica para eliminar al usuario de la base de datos.
+            // Puedes usar una consulta DELETE para esto.
+            $sql = "DELETE FROM usuario WHERE usuario_id = $usuarioAEliminar";
+            if ($conn->query($sql) === TRUE) {
+                echo "Usuario eliminado correctamente.";
+            } else {
+                echo "Error al eliminar al usuario: " . $conn->error;
+            }
+        }
+        
         // Query para obtener todos los usuarios
         $sql = "SELECT * FROM usuario";
         $result = $conn->query($sql);
@@ -32,6 +45,7 @@
                         <th>ID</th>
                         <th>Usuario</th>
                         <th>Correo</th>
+                        <th>Administrar</th>
                     </tr>";
             
             while ($row = $result->fetch_assoc()){
@@ -39,6 +53,9 @@
                     echo "<td>" . $row['usuario_id'] . "</td>";
                     echo "<td>" . $row['usuario'] . "</td>";
                     echo "<td>" . $row['correo'] . "</td>";
+                    echo "<td class='admin'>";
+                    echo "<a href='?eliminar=" . $row['usuario_id'] . "'>Eliminar</a>";
+                    echo "</td>";
                 echo "</tr>";
             }
 

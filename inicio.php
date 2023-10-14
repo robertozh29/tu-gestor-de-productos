@@ -26,10 +26,7 @@ if (!$_SESSION['usuario']) {
                 <img src="assets/usuarios.jpg" alt="">
                 <p>Mis usuarios</p>
             </div>
-            <div class="contenedor-opcion" id="productos">
-                <img src="assets/almacen.jpg" alt="">
-                <p>Mis productos</p>
-            </div>
+            
         </div>
 
     </main>

@@ -141,7 +141,6 @@ form input:hover {
     margin: 50px 0 0 0;
 }
 
-
 .mostrar {
     border-collapse: collapse;
     overflow-y: scroll;
@@ -165,10 +164,16 @@ form input:hover {
     text-align: left;
 }
 
+
 .mostrar td {
     padding: 8px;
     border: 1px solid #ccc;
 }
+
+.mostrar .admin{
+    display: flex;
+}
+
 
 @media (max-width: 768px) {
     .opciones{
