@@ -20,7 +20,7 @@ if (!$_SESSION['usuario']) {
     <main>
         
         <a href="mostrar_usuarios.php"><p>Mostrar usuarios</p></a>
-        <form action="controller/close_sessions.php" method="post">
+        <form action="close_sessions.php" method="post">
             <input type="submit" value="Cerrar Sesión">
         </form>
     </main>
